@@ -1,15 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap';
-import '../css/app.css';
-import {createApp} from 'vue'
-import App from './App.vue'
-import router from './router';
+import { createApp } from 'vue';
+import App from './components/App.vue';
+import router from './router';  // импорт маршрутов
 
-const app = createApp(App);
 
-// Используем Vue Router
-app.use(router);
-
-// Монтируем приложение
-app.mount('#app');
-
+createApp(App)
+    .use(router)  // подключение маршрутов
+    .mount('#app');
