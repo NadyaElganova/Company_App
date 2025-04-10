@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CompanyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,11 +11,7 @@ use App\Http\Controllers\CompanyController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('app');
-});
-
-Route::get('/companies', [CompanyController::class, 'index']);
-
-Route::get('/companies/{id}', [CompanyController::class, 'show']);
+Route::get('/{any}', function () {
+    return view('app');  // Отдаем одно место для всей Vue-приложения
+})->where('any', '.*');
 

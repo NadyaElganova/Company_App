@@ -2,10 +2,10 @@
   <div class="login-page">
     <div class="form">
       <form @submit.prevent="handleLogin" class="login-form">
-        <input type="text" v-model="username" placeholder="Username" />
-        <input type="password" v-model="password" placeholder="Password" />
-        <button type="submit">Login</button>
-        <p class="message">Not registered? <router-link to="/register">Create an account</router-link></p>
+        <input type="text" v-model="username" placeholder="Логин" />
+        <input type="password" v-model="password" placeholder="Пароль" />
+        <button type="submit">Войти</button>
+        <p class="message">Не зарегистрированы? <router-link to="/register">Создать аккаунт</router-link></p>
       </form>
     </div>
   </div>

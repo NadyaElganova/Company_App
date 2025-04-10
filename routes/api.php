@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('companies', [CompanyController::class, 'index']);  // Получить все компании
-// Route::get('companies/{id}', [CompanyController::class, 'show']);  // Получить конкретную компанию по id
+Route::get('companies/{id}', [CompanyController::class, 'show']);  // Получить конкретную компанию по id

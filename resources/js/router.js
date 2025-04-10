@@ -7,6 +7,7 @@ import CompanyDetail from './components/CompanyDetail.vue';
 const routes = [
   { path: '/', component: Login },
   { path: '/register', component: Register },
+  { path: '/login', component: Login },
   { path: '/companies', component: CompaniesList },
   { path: '/company/:id', component: CompanyDetail, props: true },
 ];

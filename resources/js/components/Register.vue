@@ -1,12 +1,12 @@
 <template>
-    <div class="login-page">
+    <div class="reg-page">
       <div class="form">
         <form @submit.prevent="handleRegister" class="register-form">
-          <input type="text" v-model="name" placeholder="Name" />
+          <input type="text" v-model="name" placeholder="Имя" />
           <input type="email" v-model="email" placeholder="Email" />
-          <input type="password" v-model="password" placeholder="Password" />
-          <button type="submit">Create</button>
-          <p class="message">Already registered? <router-link to="/">Sign In</router-link></p>
+          <input type="password" v-model="password" placeholder="Пароль" />
+          <button type="submit">Зарегистрироваться</button>
+          <p class="message">Уже зарегистрированы? <router-link to="/">Войти</router-link></p>
         </form>
       </div>
     </div>

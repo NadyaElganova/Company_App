@@ -43,13 +43,29 @@ export default {
   },
 
   created() {
-    this.fetchCompanies();  // Получаем компании при создании компонента
+    //this.fetchCompanies();  // Получаем компании при создании компонента
+  },
+
+  mounted(){
+    this.getCompanies();
   },
 
   methods: {
+    getCompanies() {
+      axios.get('/api/companies')
+        .then((response) => {
+          console.log(response.data);
+          this.companies = response.data;
+        })
+        .catch((error) => {
+          console.error('Ошибка при получении данных:', error);
+        });
+    },
+
     async fetchCompanies() {
       try {
         const response = await axios.get('/companies');  // Ваш API-эндпоинт
+        console.log(response.data);
         this.companies = response.data;  // Сохраняем данные в массив
       } catch (error) {
         console.error('Ошибка при получении данных:', error);
